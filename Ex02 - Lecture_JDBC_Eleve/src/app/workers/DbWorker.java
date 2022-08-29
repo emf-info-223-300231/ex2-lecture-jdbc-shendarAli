@@ -22,7 +22,7 @@ public class DbWorker implements DbWorkerItf {
 
     @Override
     public void connecterBdMySQL(String nomDB) throws MyDBException {
-        final String url_local = "jdbc:mysql://localhost:3306/" + nomDB;
+        final String url_local = "jdbc:access://localhost:3306/" + nomDB;
         final String url_remote = "jdbc:mysql://LAPEMFB37-21.edu.net.fr.ch:3306/" + nomDB;
         final String user = "root";
         final String password = "emf1234";
