@@ -86,23 +86,19 @@ public class DbWorker implements DbWorkerItf {
 
     @Override
     public Personne precedentPersonne() throws MyDBException {
-        int newIndex = 0;
+
         if (listePersonnes == null) {
             lirePersonnes();
         }
+        index--;
+        Personne pres;
         if (index < 0) {
             index = 0;
         }
-        Personne pres;
-        if (index == 0) {
-            pres = listePersonnes.get(index);
-            newIndex = index - 1;
-        } else {
-            pres = listePersonnes.get(newIndex);
-            newIndex = index - 1;
-        }
+        pres = listePersonnes.get(index);
+
         System.out.println("personne precedent" + index);
-        index = newIndex;
+
         return pres;
     }
 
@@ -113,20 +109,14 @@ public class DbWorker implements DbWorkerItf {
         }
 
         lirePersonnes();
-        int newIndex;
+
         Personne pres;
-        if (index > 16) {
+        if (index > listePersonnes.size()) {
             index = 0;
-            newIndex = index + 1;
-            pres = listePersonnes.get(newIndex);
-
-        } else {
-            newIndex = index + 1;
-            pres = listePersonnes.get(newIndex);
-
         }
+        pres = listePersonnes.get(index);
         System.out.println("personne suivant" + index);
-        index = newIndex;
+    
         return pres;
 
     }
