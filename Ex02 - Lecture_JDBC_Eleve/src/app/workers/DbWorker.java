@@ -111,6 +111,7 @@ public class DbWorker implements DbWorkerItf {
         lirePersonnes();
 
         Personne pres;
+        index++;
         if (index > listePersonnes.size()) {
             index = 0;
         }
