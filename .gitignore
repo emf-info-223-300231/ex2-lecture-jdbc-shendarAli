@@ -21,3 +21,5 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /Ex02 - Lecture_JDBC_Eleve/nbproject/private/
+/Ex02 - Lecture_JDBC_Eleve/build/
+/Ex02 - Lecture_JDBC_Eleve/dist/
